@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: iransans;
+    src: url("../../public/assets/fonts/iransans/irsans-l.woff");
+}
+
+html , body{
+    font-family: iransans;
+  }
+
+  .swiper-pagination-bullet-active{
+    
+    background: #3b82f6 !important;
+    width: 3rem !important;
+    border-radius: 10px !important;
+    transition: all 0.5s !important;
+  }
