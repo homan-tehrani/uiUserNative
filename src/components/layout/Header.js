@@ -16,7 +16,7 @@ export default function Header() {
     <header>
     
     <div  className="bg-cyan-800  text-md w-full h-12 flex   items-center justify-center">
-    <p className="text-white">1:26:45 مانده تا پخش jjj</p>
+    <p className="text-white">1:26:45 مانده تا پخش qdkjjvjfvyucdyuf</p>
     </div>
     <div className=" flex items-center justify-between w-10/12 mx-auto my-4 ">
       
