@@ -25,13 +25,13 @@ export default function Home({ datas }) {
 
             <>
             <Slider />
-            <Album1 />
-            <Invitation/>
-            <Album2/>
-            <Description/>
+             <Album1 />
+             <Invitation/>
+             <Album2/>
+           <Description/>
             <Album3 />
-            <Suggestion />
-            <Speech />
+             <Suggestion />
+           <Speech />   
             </>
 
       </main>

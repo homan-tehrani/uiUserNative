@@ -29,8 +29,8 @@ export default function Slider() {
     }
 
   return (
-    <div className='w-full h-max bg-neutral-100 flex flex-col items-center justify-center py-12 my-6'>
-    <div className='w-full  h-120 '>
+    <div className='xs:my-3 xs:py-6  w-full h-max bg-neutral-100 flex flex-col items-center justify-center my-6 '>
+    <div className='w-full h-max  '>
     <Swiper
     modules={[Navigation, Pagination, Scrollbar, A11y , EffectFade]}
     spaceBetween={100}
@@ -56,7 +56,7 @@ export default function Slider() {
     scrollbar={{ draggable: true }}
     onSwiper={(swiper) => console.log(swiper)}
     onSlideChange={() => console.log('slide change')}
-    className="w-10/12 h-full"
+    className="xs:w-11/12 xs:h-40 h-64 md:h-120 my-6  w-11/12 md:w-10/12 md:h-72 lg:h-120"
   >
     {imagesSlider.map(item=>
        <SwiperSlide key={item.id} className='w-full h-full'>
@@ -73,27 +73,27 @@ export default function Slider() {
     ...
   </Swiper>
   </div>
-  <div className='flex items-center justify-center gap-x-4 w-10/12 h-max  my-6   gap-y-4'> 
-    <div dir='rtl' className='sm:w-1/3 sm:h-28 bg-red-100 border border-red-500 rounded-md  flex items-center  cursor-pointer grow-0 p-2'>
+  <div className='flex xs:flex-col xs:my-5 xs:w-11/12 md:w-10/12 flex-col w-11/12 md:flex-row  gap-x-4  h-max    gap-y-4'> 
+    <div  className='xs:w-full w-full md:w-1/3  sm:h-32 bg-red-100  border border-red-500 rounded-md  flex items-center  cursor-pointer p-2'>
     <svg xmlns="http://www.w3.org/2000/svg" className='fill-red-700  ml-2 mb-6 ' viewBox="0 0 24 24" width="40" height="40"><path fill="none" d="M0 0L24 0 24 24 0 24z"/><path d="M17 2v2h3.007c.548 0 .993.445.993.993v16.014c0 .548-.445.993-.993.993H3.993C3.445 22 3 21.555 3 21.007V4.993C3 4.445 3.445 4 3.993 4H7V2h10zM7 6H5v14h14V6h-2v2H7V6zm2 10v2H7v-2h2zm0-3v2H7v-2h2zm0-3v2H7v-2h2zm6-6H9v2h6V4z"/></svg>
     <div className='flex flex-col gap-y-4 justify-center items-start '>
-    <p className='text-lg font-bold text-red-600'>شرکت در نظرسنجی خانواده</p>
-    <p className='text-sm'>مطالب این وبلاگ با هدف روشنگری در ...</p>
+    <p className=' xs:text-ssm md:text-sm lg:text-lg font-bold text-red-600'>شرکت در نظرسنجی خانواده</p>
+    <p className='xs:text-xxsm md:text-ssm'>مطالب این وبلاگ با هدف روشنگری در ...</p>
     </div>
     </div>
-    <div className='sm:w-1/3 sm:h-28 bg-fuchsia-700 border  rounded-md  flex items-center cursor-pointer grow-0 p-2'>
+    <div className='xs:w-full w-full md:w-1/3  sm:h-32 bg-fuchsia-700 border  rounded-md  flex items-center cursor-pointer  p-2'>
     <svg xmlns="http://www.w3.org/2000/svg" className='fill-white mb-6 ml-2' viewBox="0 0 24 24" width="40" height="40"><path fill="none" d="M0 0L24 0 24 24 0 24z"/><path d="M17 2v2h3.007c.548 0 .993.445.993.993v16.014c0 .548-.445.993-.993.993H3.993C3.445 22 3 21.555 3 21.007V4.993C3 4.445 3.445 4 3.993 4H7V2h10zM7 6H5v14h14V6h-2v2H7V6zm2 10v2H7v-2h2zm0-3v2H7v-2h2zm0-3v2H7v-2h2zm6-6H9v2h6V4z"/></svg>
     <div className='flex flex-col justify-center items-start gap-y-4'>
-    <p className='text-lg font-bold text-white'>ثبت نام دوره مهدویت</p>
-    <p className='text-white text-sm'>مطالب این وبلاگ با هدف روشنگری در ...</p>
+    <p className='text-lg xs:text-ssm md:text-sm font-bold text-white'>ثبت نام دوره مهدویت</p>
+    <p className='xs:text-xxsm text-white md:text-ssm text-sm'>مطالب این وبلاگ با هدف روشنگری در ...</p>
     </div>
     </div>
-    <div dir='rtl' className='sm:w-1/3 sm:h-28 bg-green-200 border-green-500 rounded-md border flex items-center cursor-pointer grow-0 p-2'>
+    <div dir='rtl' className='xs:w-full  w-full md:w-1/3  sm:h-32 bg-green-200 border-green-500 rounded-md border flex items-center cursor-pointer  p-2'>
 
     <svg xmlns="http://www.w3.org/2000/svg" className='fill-green-800 mb-6 ml-2' viewBox="0 0 24 24" width="40" height="40"><path fill="none" d="M0 0L24 0 24 24 0 24z"/><path d="M17 2v2h3.007c.548 0 .993.445.993.993v16.014c0 .548-.445.993-.993.993H3.993C3.445 22 3 21.555 3 21.007V4.993C3 4.445 3.445 4 3.993 4H7V2h10zM7 6H5v14h14V6h-2v2H7V6zm2 10v2H7v-2h2zm0-3v2H7v-2h2zm0-3v2H7v-2h2zm6-6H9v2h6V4z"/></svg>
     <div className='flex flex-col justify-center items-start gap-y-4 '>
-    <p className='text-lg font-bold text-green-700'>شرکت در نظرسنجی خانواده</p>
-    <small className='text-black'>مطالب این وبلاگ با هدف روشنگری در ...</small>
+    <p className='xs:text-tsm text-lg md:text-sm font-bold text-green-700'>شرکت در نظرسنجی خانواده</p>
+    <p className='xs:text-xxsm text-black md:text-ssm'>مطالب این وبلاگ با هدف روشنگری در ...</p>
     </div>
     </div>
   </div>

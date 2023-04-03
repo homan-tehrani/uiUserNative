@@ -5,7 +5,7 @@ import Fotter from "./Fotter";
 export default function Layoute({ children , datas }) {
   return (
     <>
-      <Header datas={datas} />
+      <Header  />
       <div>{children}</div>
       
       <Fotter datas={datas} />

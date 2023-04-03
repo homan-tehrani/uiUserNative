@@ -27,7 +27,7 @@ export default function Album2() {
     }
 
   return (
-    <div className=" mx-32">
+    <div className="xs:mx-4 mx-2 md:w-10/12 md:mx-auto sm:mx-2">
     <div className=" mb-6 ">
     <MorSpeech classMore="blue-400" underline="true" colorIcon="fill-blue-400" colorText="text-blue-400" content="جدیدترین سخنرانی ها" nextButtonHandler={nextSlideHandler} prevButtonHandler={prevSlideHandler}/>
     </div>
@@ -36,17 +36,31 @@ export default function Album2() {
         grid={{
           rows: 2,
         }}
-        spaceBetween={30}
+        spaceBetween={20}
         modules={[Grid, Pagination]}
+          breakpoints={{
+          // when window width is >= 640px
+          0:{
+            slidesPerView: 1,
+          },
+          640: {
+            
+            slidesPerView: 2,
+          },
+          1370: {
+            
+            slidesPerView: 3,
+          },
+        }}
         className="w-full h-96  "
       >
         {albumPhotos2.map(item=>
-            <SwiperSlide key={item.id} className="!flex !items-center !justify-center !h-40 border rounded-l-md">
-                <div dir="rtl" className="flex w-full h-full">
-                    <div className="w-40 h-full">
+            <SwiperSlide key={item.id} className="!flex !items-center !justify-center   !h-40  ">
+                <div dir="rtl" className="flex  w-full  h-full">
+                    <div className="w-40 h-full ">
                     <img className="w-full h-full  " src={item.src} alt={item.alt} />
                     </div>
-                    <div className="flex flex-col justify-between h-full w-80 py-3 pr-3 bg-neutral-100">
+                    <div className="flex flex-col justify-between h-full w-48 py-3 pr-3 bg-neutral-100 border rounded-l-md">
                     <div>
                         <div className="flex items-center gap-x-1">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 3a3 3 0 0 0-3 3v4a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zm0-2a5 5 0 0 1 5 5v4a5 5 0 0 1-10 0V6a5 5 0 0 1 5-5zM3.055 11H5.07a7.002 7.002 0 0 0 13.858 0h2.016A9.004 9.004 0 0 1 13 18.945V23h-2v-4.055A9.004 9.004 0 0 1 3.055 11z"/></svg>

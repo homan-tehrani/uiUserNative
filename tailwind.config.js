@@ -23,7 +23,9 @@ module.exports = {
         '100':'30rem',
         '110':'33rem',
         'ppx':'0.5px',
-        '400px': '400px'
+        '400px': '400px',
+        '1200px':'1200px',
+        '370px':'370px'
       },
       fontSize:{
         tsm:['13px','19px'],
