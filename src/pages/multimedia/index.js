@@ -7,6 +7,8 @@ export default function Multimedia() {
   const [isShowAccordion2 , setIsShowAccordion2]=useState(false)
   const [isShowAccordion3 , setIsShowAccordion3]=useState(false)
   const [allcorses , setAllCorses]=useState(null)
+  const [filterLazy , setFilterLazy]=useState(null)
+  const showSlide = 12
   useEffect(()=>{
     setAllCorses(albumPhoto)
   },[])
@@ -19,13 +21,15 @@ export default function Multimedia() {
   const accordionHandler3 = ()=>{
     setIsShowAccordion3(prev=> !prev)
   }
-  console.log(albumPhoto);
+
+  
   if(!allcorses){
     return <Loading/>
   }
+ 
   return (
     <div className='bg-neutral-100 flex  h-max py-10 w-full mt-4'>
-      <aside className='w-4/12 h-full -translate-x-5 flex flex-col items-center gap-y-6 '>
+      <aside className='w-4/12 h-full -translate-x-5 flex flex-col items-center gap-y-6  sticky -top-110'>
         <div className='w-72 border h-36 bg-white rounded-xl flex flex-col items-center justify-center gap-y-3'>
             <p className='text-right pl-6 font-bold'>اشتراک گذاری در فضای مجازی</p>
             <div className='xs:-translate-y-4  flex  w-11/12 xs:h-8 xs:w-32  justify-around h-12 items-center rounded-md  translate-y-4 fill-white opacity-60'>
@@ -68,7 +72,7 @@ export default function Multimedia() {
         </div>
 
         <div className='w-72 border h-48 bg-white rounded-xl flex flex-col items-center justify-center  '>
-            <p className='text-right pb-4 w-full pr-7 font-bold '>آرشیو بر اساس بازه زمانی</p>
+            <p className='text-right mt-6 w-full pr-7 font-bold flex items-center  '>آرشیو بر اساس بازه زمانی</p>
             
             <div className='flex flex-col items-center justify-center  w-full h-full gap-y-2  h-2/4'>
               <div className='flex items-cenetr h-12 justify-center'>
@@ -157,8 +161,10 @@ export default function Multimedia() {
 
 
 
+        
 
-        <div className='w-8/12 h-full  translate-x-4 flex flex-wrap justify-start items-center gap-x-4'>
+        <div className=' w-8/12 h-full  flex flex-col items-center gap-y-2'>
+        <div className='w-full h-11/12 translate-x-4 flex  flex-wrap justify-start items-center gap-x-4'>
         
         {allcorses.map(item=>
            <div key={item.id} className='w-72 h-80 hover:bg-white'>
@@ -184,15 +190,20 @@ export default function Multimedia() {
 
          </div>
           )}
+          
 
-         
-
+        
+          
           
 
          
 
-        
+         
         </div>
+        <button className='w-24 h-8 bg-neutral-200 rounded'>بیشتر</button>
+        </div>
+
+        
 
     </div>
   )

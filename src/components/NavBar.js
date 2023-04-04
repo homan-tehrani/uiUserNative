@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from "react";
+import Link from 'next/link';
 
 export default function Navbar() {
     const [showMenu , setShowMenu]=useState(false)
@@ -23,39 +24,19 @@ export default function Navbar() {
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0 2C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3.11-8.83l-2.498-.779c-.54-.165-.543-.537.121-.804l9.733-3.76c.565-.23.885.061.702.79l-1.657 7.82c-.116.557-.451.69-.916.433l-2.551-1.888-1.189 1.148c-.122.118-.221.219-.409.244-.187.026-.341-.03-.454-.34l-.87-2.871-.012.008z"/></svg>
           </li>
         </ul>
-        <div className="z-40 sm:hidden xs:text-sm  w-20 h-max flex items-center justify-center flex-col xs:flex xs:items-center xs:flex-col xs:justify-center -translate-x-26">
-        <button onClick={showHandler} className="xs:h-6 xs:mt-1 bg-gray-200 w-full h-8 rounded">منو</button>
-          {showMenu && <ul dir="rtl" className="bg-gray-200  w-36 h-max  divide-y divide-slate-400  -translate-x-8">
-          <li className="flex  mx-3 cursor-pointer  py-1 ">
-          
-             واحدها
-            </li>
-          <li className="flex mx-3  cursor-pointer border-b py-1">
-          
-             چند رسانه ای</li>
-          <li className="flex mx-3 cursor-pointer border-b py-1">
-         
-            آرشیو کتابها</li>
-            <li className="flex mx-3 cursor-pointer border-b py-1">
-          
-             گالری تصاویر</li>
-             <li className="flex mx-3 cursor-pointer border-b py-1">
-        
-             فضای مجازی</li>
-        </ul>}
-        </div>
+       
         
         <ul className="flex items-center justify-center ">
-          <li className="flex  ml-2 cursor-pointer  font-bold">
+          <Link href="/units" className="flex  ml-2 cursor-pointer  font-bold">
           <svg xmlns="http://www.w3.org/2000/svg" className='ml-0.5' viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M21 4H7a2 2 0 1 0 0 4h14v13a1 1 0 0 1-1 1H7a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h13a1 1 0 0 1 1 1v1zM5 18a2 2 0 0 0 2 2h12V10H7a3.982 3.982 0 0 1-2-.535V18zM20 7H7a1 1 0 1 1 0-2h13v2z"/></svg>
              واحدها
              
              <svg xmlns="http://www.w3.org/2000/svg" className='mx-2' viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"/></svg>
              <span className='text-slate-400'>|</span>
-            </li>
-          <li className="flex ml-5 cursor-pointer">
+            </Link>
+          <Link href="/multimedia" className="flex ml-5 cursor-pointer">
           <svg xmlns="http://www.w3.org/2000/svg" className='ml-1' viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 3a3 3 0 0 0-3 3v4a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zm0-2a5 5 0 0 1 5 5v4a5 5 0 0 1-10 0V6a5 5 0 0 1 5-5zM3.055 11H5.07a7.002 7.002 0 0 0 13.858 0h2.016A9.004 9.004 0 0 1 13 18.945V23h-2v-4.055A9.004 9.004 0 0 1 3.055 11z"/></svg>
-            پنل چند رسانه ای</li>
+            پنل چند رسانه ای</Link>
           <li className="flex ml-5 cursor-pointer">
           <svg xmlns="http://www.w3.org/2000/svg" className='ml-1' viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM10.622 8.415l4.879 3.252a.4.4 0 0 1 0 .666l-4.88 3.252a.4.4 0 0 1-.621-.332V8.747a.4.4 0 0 1 .622-.332z"/></svg>
             آرشیو کتابها</li>
