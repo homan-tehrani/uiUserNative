@@ -3,12 +3,18 @@ import Loading from '../loading'
 import Navbar from '../NavBar'
 import {imgeProfile} from "../../db.json"
 import Link from 'next/link'
+import MenuResponsive from '../MenuResponsive'
 
 export default function Header() {
     const [imageProfile , setImageProfile]=useState(null)
+    const [showMenu , setShowMenue]=useState(false)
     useEffect(()=>{
         setImageProfile(imgeProfile)
     },[])
+
+    const showMenuHandler =()=>{
+      setShowMenue(prev=> !prev)
+    }
     
 
   if(!imageProfile){
@@ -56,17 +62,21 @@ export default function Header() {
 
 
 
-    <div className="lg:hidden w-full h-20 flex items-center justify-between px-4 my-6 ">
+    <div className="lg:hidden w-full h-20 relative flex items-center justify-between px-4 my-6 ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           width="30"
           height="30"
+          onClick={showMenuHandler}
         >
           <path fill="none" d="M0 0h24v24H0z" />
           <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" />
         </svg>
         <Link href="/">
+         {showMenu && <MenuResponsive/>} 
+        
+
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -105,6 +115,7 @@ export default function Header() {
           className="  outline-0 h-full bg-inherit rounded-md"
         />
       </div>
+      
     <Navbar/>
     </header>
   )

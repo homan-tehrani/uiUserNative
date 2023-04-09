@@ -58,7 +58,7 @@ export default function Register() {
   return (
   
     <div className='w-11/12  md:container flex items-center justify-center mx-auto'>
-    <div className="w-full md:w-7/12 h-[650px] mx-auto   md:border  md:rounded-2xl md:mt-16 mb-24 ">
+    <div className="w-full md:w-7/12 h-[700px] mx-auto   md:border  md:rounded-2xl md:mt-16 mb-24 ">
       <div className="w-full h-14 ">
         <div className="w-full h-full xs:text-sm flex justify-around items-center font-bold">
           <button
