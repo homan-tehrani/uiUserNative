@@ -2,24 +2,26 @@ import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import { Pagination , Navigation } from "swiper";
 import Loading from "./loading";
 import MorSpeech from "./MorSpeech";
 import {albumPhoto3} from "../../src/db.json"
 
 export default function Album3() {
   const [albumPhotos3, setAlbumPhotos3] = useState(null);
+
+  const swiperRef = useRef();
   useEffect(() => {
     setAlbumPhotos3(albumPhoto3);
   }, []);
 
 
   const nextSlideHandler =()=>{
-    console.log("next");
+    swiperRef.current?.slideNext()
   }
 
   const prevSlideHandler =()=>{
-    console.log("prev");
+    swiperRef.current?.slidePrev()
   }
 
   if (!albumPhotos3) {
@@ -27,8 +29,8 @@ export default function Album3() {
   }
 
   return (
-    <div className="bg-gray-800 pt-16 md:pt-12 pb-8 mb-16  px-4 ">
-        <div className="-translate-y-8 w-10/12 mx-auto ">
+    <div className="bg-gray-800 pt-16 md:pt-12 pb-8 mb-16  px-2 ">
+        <div className="-translate-y-8 container mx-auto ">
           
         <div  className='flex -translate-y-3 sm:translate-y-8 lg:translate-x-40 w-full items-center justify-center  gap-x-1 h-8   text-xsm text-white  px-1 rounded-sm'>
          <div className="bg-gray-900 gap-x-1 p-1 rounded-md flex ">
@@ -51,8 +53,11 @@ export default function Album3() {
       <Swiper
         slidesPerView={4}
         spaceBetween={15}
-     
-        modules={[Pagination]}
+        modules={[Pagination , Navigation]}
+        onBeforeInit={(swiper)=>{
+          swiperRef.current = swiper;
+        }}  
+       
         breakpoints={{
           // when window width is >= 640px
           0:{
@@ -72,7 +77,8 @@ export default function Album3() {
           },
          
         }}
-        className="w-full h-80  "
+      
+        className="container h-80  "
       >
         {albumPhotos3.map((item) => (
           <SwiperSlide

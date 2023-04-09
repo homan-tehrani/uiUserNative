@@ -1,7 +1,7 @@
 import React, { useRef, useState , useEffect} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Loading from "./loading";
-import MorSpeech from "./MorSpeech";
+import MorSpeech from "../components/MorSpeech";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,66 +13,60 @@ import { Navigation, Pagination } from "swiper";
 export default function Album1() {
     
     const [albumPhotos1 , setAlbumPhotos1]=useState(null)
-
+    const swiperRef = useRef();
     useEffect(()=>{
         setAlbumPhotos1(albumPhoto)
     },[])
-    const swiperNavPrevRef = useRef(null)
-    const swiperNavNextRef = useRef(null)
+
+    const prevSlideHandler=()=>{
+      swiperRef.current?.slidePrev()
+    }
+
+    const nextSlideHandler =()=>{
+      swiperRef.current?.slideNext()
+    }
 
     if(!albumPhotos1){
         return <Loading/>
     }
-    const nextSlideHandler = ()=>{
-      console.log("next");
-    }
 
-    const prevSlideHandler = ()=>{
-      console.log("prev");
-    }
   return (
-    <div className="w-full xs:px-4  px-2 md:w-10/12 md:mx-auto my-10 md:mx-32">
+    
+    <div className="  container px-2 mx-auto my-10 ">
+     <MorSpeech classMore="blue-400" underline="true" colorIcon="fill-blue-400" colorText="text-blue-400" content="جدیدترین سخنرانی ها" nextButtonHandler={nextSlideHandler} prevButtonHandler={prevSlideHandler}/>
     <div className=" mb-6">
-    <MorSpeech classMore="blue-400" colorIcon="fill-blue-400" colorText="text-blue-400" content="جدیدترین سخنرانی ها" nextButtonHandler={nextSlideHandler} prevButtonHandler={prevSlideHandler} underline={true}/>
+
+    {/* <button onClick={() => swiperRef.current?.slidePrev()}>Prev</button> */}
+    
     </div>
       <Swiper
-        
+      
         spaceBetween={20}
         breakpoints={{
           0: {
             slidesPerView: 1,
           },
-          400:{
-            slidesPerView:2,
-          },
           640: {
+            slidesPerView: 2,
+          },
+          768: {
             slidesPerView: 3,
           },
-          1000:{
+          1024:{
             slidesPerView:4
           }
         }}
         modules={[Pagination , Navigation]}
-        navigation={{
-            nextEl : swiperNavNextRef.current,
-            prevEl : swiperNavPrevRef.current,
-        }
-        }
-        onInit={(swiper)=>{
-            swiper.params.navigation.prevEl = swiperNavPrevRef.current;
-            swiper.params.navigation.nextEl = swiperNavNextRef.current;
-            swiper.navigation.init();
-            swiper.navigation.update();
-    
+        onBeforeInit={(swiper) => {
+          swiperRef.current = swiper;
         }}
-       
         
-        className="w-full h-80  "
+        className="w-full h-80 max-w- "
       >
         {albumPhotos1.map(item=>
-            <SwiperSlide key={item.id} className=" flex items-center rounded-b-md border border-stone-300 justify-center ml-1  rounded-b-md">
-                <div className="w-full h-full text-sm ">
-                    <div className="w-full h-36">
+            <SwiperSlide key={item.id} className="max-w-[300px]  flex items-center border border-stone-300 justify-center ml-1  rounded-b-md">
+                <div className="w-full h-full text-sm snap-mandatory snap-x  ">
+                    <div className="w-full h-36 ">
                     <img className="w-full h-full object-cover" src={item.src} alt={item.alt} />
                     </div>
                     <div dir="rtl" className="bg-neutral-100 flex flex-col w-full h-44 justify-between py-2 pr-2 opacity-70">
@@ -99,12 +93,7 @@ export default function Album1() {
 
             </SwiperSlide>
             )}
-            <div className="!flex !mb-20">
-            <div ref={swiperNavPrevRef} className="swiper-button-prev !text-white "></div>
-         
-            </div>
 
-            <div ref={swiperNavNextRef} className="swiper-button-next !text-white"></div>
 
       </Swiper>
     </div>

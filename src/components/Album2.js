@@ -6,20 +6,21 @@ import MorSpeech from "./MorSpeech";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
-import { Grid, Pagination } from "swiper";
+import { Grid, Pagination ,Navigation} from "swiper";
 import {albumPhoto2} from "../../src/db.json"
 
 export default function Album2() {
     const [albumPhotos2 , setAlbumPhotos2]=useState(null)
+    const swiperRef = useRef();
     useEffect(()=>{
         setAlbumPhotos2(albumPhoto2)
     },[])
     const nextSlideHandler =()=>{
-        console.log("next");
+        swiperRef.current?.slideNext();
     }
 
     const prevSlideHandler =()=>{
-        console.log("prev");
+        swiperRef.current?.slidePrev();
     }
 
     if(!albumPhotos2){
@@ -27,7 +28,7 @@ export default function Album2() {
     }
 
   return (
-    <div className="xs:mx-4 mx-2 md:w-10/12 md:mx-auto sm:mx-2">
+    <div className=" container px-2 mx-auto ">
     <div className=" mb-6 ">
     <MorSpeech classMore="blue-400" underline="true" colorIcon="fill-blue-400" colorText="text-blue-400" content="جدیدترین سخنرانی ها" nextButtonHandler={nextSlideHandler} prevButtonHandler={prevSlideHandler}/>
     </div>
@@ -37,11 +38,16 @@ export default function Album2() {
           rows: 2,
         }}
         spaceBetween={20}
-        modules={[Grid, Pagination]}
+        modules={[Grid, Pagination , Navigation]}
+        onBeforeInit={(swiper) => {
+          swiperRef.current = swiper;
+        }}
+        
           breakpoints={{
           // when window width is >= 640px
           0:{
             slidesPerView: 1,
+            
           },
           640: {
             
@@ -55,7 +61,7 @@ export default function Album2() {
         className="w-full h-96  "
       >
         {albumPhotos2.map(item=>
-            <SwiperSlide key={item.id} className="!flex !items-center !justify-center   !h-40  ">
+            <SwiperSlide key={item.id} className="!flex max-w-[400px] !items-center !justify-center   !h-40  ">
                 <div dir="rtl" className="flex  w-full  h-full">
                     <div className="w-40 h-full ">
                     <img className="w-full h-full  " src={item.src} alt={item.alt} />

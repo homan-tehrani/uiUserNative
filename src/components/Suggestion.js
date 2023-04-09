@@ -15,11 +15,11 @@ export default function Suggestion() {
     }
 
   return (
-    <div className='flex flex-col items-center justify-center w-10/12  mx-auto h-max gap-y-14 xs:my-12 my-24'>
+    <div className='flex flex-col items-center justify-center container px-2  mx-auto h-max gap-y-14 xs:my-12 my-24 '>
         <h2 className='text-xl font-bold'>مطالب مناسب شما</h2>
-        <div className='w-full h-max  flex justify-center lg:justify-center  items-center flex-wrap gap-y-6'>
+        <div className='w-full h-max  flex justify-center lg:justify-between  items-center flex-wrap gap-y-6'>
            {suggestionPhoto.map(item=>
-             <div key={item.id} className='w-400px  h-full mx-2 '>
+             <div key={item.id} className='w-400px  h-full  '>
              <div className='w-full xs:h-56 h-72  sm:h-80'>
              <img src={item.src} alt={item.alt} className='w-full h-full '/>
              </div>

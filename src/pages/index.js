@@ -10,7 +10,7 @@ import Album2 from "../components/Album2";
 import Description from "../components/Description";
 import Album3 from "../components/Album3";
 import Suggestion from "../components/Suggestion";
-import Speech from "../components/Speech";
+
 
 export default function Home({ datas }) {
   return (
@@ -31,7 +31,7 @@ export default function Home({ datas }) {
            <Description/>
             <Album3 />
              <Suggestion />
-           <Speech />   
+            
             </>
 
       </main>

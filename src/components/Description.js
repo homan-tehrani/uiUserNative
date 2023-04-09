@@ -5,7 +5,7 @@ const Description = () => {
       <div className="w-full bg-red-100 h-96  py-14  flex flex-col xs:flex xs:items-center xs:justify-center items-center justify-center   ">
         <div className="w-full ">
           <div className="  h-20  flex items-center justify-between -translate-y-4 md:-translate-y-18">
-            <div className=" w-2/5 h-1 rounded-full relative  bg-gradient-to-l from-white  to-cyan-600 rounded-full ">
+            <div className=" w-2/5 h-1  relative  bg-gradient-to-l from-white  to-cyan-600 rounded-full ">
               <span className="w-px h-px p-1 bg-cyan-600 rounded-full absolute -left-3 -top-0.5"></span>
             </div>
             <div className=" w-2/5 h-1 relative  bg-gradient-to-r from-white  to-cyan-600 rounded-full">
@@ -21,7 +21,7 @@ const Description = () => {
               </div>
             </div>
 
-            <div className="w-100 flex flex-row-reverse flex-col justify-between  xs:w-full xs:h-60 h-60 bg-white rounded-xl border border-neutral-400">
+            <div className="w-100 flex  flex-col justify-between  xs:w-full xs:h-60 h-60 bg-white rounded-xl border border-neutral-400">
               <div className="flex  items-center gap-x-4 mt-4 gap-y-1  w-11/12 mx-auto">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -10,7 +10,15 @@
 html , body{
     font-family: iransans;
   }
-
+  /* 
+  .swiper-pagination{
+    background: red;
+    position: absolute;
+    bottom: "10px";
+  }
+  .swiper-wrapper{
+    background-color: blue;
+  }
   .swiper-pagination-bullet-active{
     
     background: #3b82f6 !important;
@@ -18,3 +26,16 @@ html , body{
     border-radius: 10px !important;
     transition: all 0.5s !important;
   }
+  .swiper{
+    background-color: red;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: sp;
+  }
+
+  @layer components {
+    .tw-pagination {
+      @apply flex items-start justify-center pt-5 relative bg-yellow-600;
+    }
+  } */
