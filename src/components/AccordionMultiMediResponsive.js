@@ -42,7 +42,7 @@ export default function AccordionMultiMediResponsive() {
               </div>
             </button>
             {isShowAccordion && (
-              <div className="w-10/12 mx-auto pb-4 flex mt-4 flex-col gap-y-8 font-bold  border-b">
+              <div className="w-10/12 mx-auto pb-4 flex mt-4 flex-col gap-y-8 font-bold border-stone-300 border-b">
                 <div className="flex items-center justify-satrt  gap-x-2 ">
                   <input type="checkbox" className="w-6 h-6 " />
                   <p>اقتصاد ایران</p>

@@ -3,9 +3,9 @@ import React from 'react'
 export default function Fotter() {
   return (
     <>
-    <div className='w-full bg-gray-800 h-[1400px] sm:h-[950px] md:h-[800px] lg:h-[700px] xl:h-[450px]  pb-6 pt-3 '>
+    <div className='w-full  bg-gray-800 h-[1400px] sm:h-[950px] md:h-[800px] lg:h-[700px] xl:h-[450px]  pb-6 pt-3 '>
      
-     <div className='container px-2 flex items-center flex-col mx-auto  '>
+     <div className='container  px-2 flex items-center flex-col mx-auto  '>
         <div className='w-full   border-b  flex  flex-col gap-y-12 h-56 justify-center items-center lg:flex-row lg:justify-between lg:items-center lg:h-[120px]'>
         <div className='flex text-white flex-col xs:h-[90px] gap-y-2 items-start justify-between   w-full   lg:w-1/2  lg:h-[72px] '>
           <h2 className='text-2xl '>ثبت نام در خبرنامه</h2>
@@ -27,7 +27,7 @@ export default function Fotter() {
       
       <div className='container px-2 flex items-center flex-col mx-auto  '>
 
-      <div className=' w-full   h-[250px]  mt-10  items-center  pb-8 gap-y-6  md:h-full  grid  grid-cols-18 '>
+      <div className=' w-full  h-[250px]  mt-10  items-center  pb-8 gap-y-6  md:h-full  grid  grid-cols-18 '>
         
           <div className=' col-[1_/_span_18] sm:col-span-full md:col-[1_/_span_18] xl:col-span-6 flex flex-col justify-between '>
             <div className='w-full h-20 mb-2 '>

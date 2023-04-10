@@ -14,12 +14,7 @@ export default function Multimedia() {
     setAllCorses(albumPhoto);
   }, []);
   
-  const accordionHandler2 = () => {
-    setIsShowAccordion2((prev) => !prev);
-  };
-  const accordionHandler3 = () => {
-    setIsShowAccordion3((prev) => !prev);
-  };
+
   const showOrderingHandler = () => {
     setShowOrdering((prev) => !prev);
   };
@@ -36,7 +31,7 @@ export default function Multimedia() {
     <div className=" bg-neutral-100 flex h-max py-10 w-full mt-4 gap-x-1 ">
       <div className="hidden    sm:flex  md:flex justify-evenly container sm:px-2 mx-auto sm:justify-between sm:gap-x-0 gap-x-2 ">
         <aside className="w-80 h-full   md:mr-0 md:translate-x-0 flex flex-col  items-start justify-start gap-y-6 ">
-          <div className="w-282px  border h-36 bg-white rounded-xl flex flex-col items-center justify-center gap-y-3">
+          <div className="w-282px  border border-stone-300 h-36 bg-white rounded-xl flex flex-col items-center justify-center gap-y-3">
             <p className="text-right pl-6 font-bold">
               اشتراک گذاری در فضای مجازی
             </p>
@@ -75,8 +70,8 @@ export default function Multimedia() {
               </svg>
             </div>
           </div>
-          <div className="w-282px h-370px  border rounded-xl bg-white">
-            <div className="w-full h-20  border-b flex items-center justify-start pr-6 gap-x-2 ">
+          <div className="w-282px h-370px  border border-stone-300 rounded-xl bg-white">
+            <div className="w-full h-20  border-b border-stone-300 flex items-center justify-start pr-6 gap-x-2 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -109,11 +104,11 @@ export default function Multimedia() {
               </div>
             </div>
           </div>
-          <div className="w-282px border h-36 bg-white rounded-xl flex flex-col items-center justify-center gap-y-4">
+          <div className="w-282px border border-stone-300 h-36 bg-white rounded-xl flex flex-col items-center justify-center gap-y-4">
             <p className="text-right  w-10/12 font-bold">
               جستجو بر اساس کلید واژه
             </p>
-            <div className="w-10/12 h-12  flex items-center border rounded-lg">
+            <div className="w-10/12 h-12  flex items-center border border-stone-300 rounded-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="mr-2 opacity-60"
@@ -134,7 +129,7 @@ export default function Multimedia() {
             </div>
           </div>
 
-          <div className="w-282px border h-48 bg-white rounded-xl flex flex-col items-center justify-center  ">
+          <div className="w-282px border border-stone-300 h-48 bg-white rounded-xl flex flex-col items-center justify-center  ">
             <p className="text-right mt-6 w-full pr-7 font-bold flex items-center  ">
               آرشیو بر اساس بازه زمانی
             </p>
@@ -146,7 +141,7 @@ export default function Multimedia() {
                 </p>
                 <input
                   type="text"
-                  className="border h-full w-8/12 rounded-lg outline-0 pr-2"
+                  className="border border-stone-300 h-full w-8/12 rounded-lg outline-0 pr-2"
                 />
               </div>
               <div className="flex items-cenetr justify-center h-12 ">
@@ -155,13 +150,13 @@ export default function Multimedia() {
                 </p>
                 <input
                   type="text"
-                  className="border h-full w-8/12 rounded-lg outline-0 pr-2"
+                  className="border border-stone-300 h-full w-8/12 rounded-lg outline-0 pr-2"
                 />
               </div>
             </div>
           </div>
-          <div className="w-282px  h-max border rounded-xl bg-white ">
-            <div className="w-full h-20  border-b flex items-center justify-start pr-6 gap-x-2 ">
+          <div className="w-282px  h-max border border-stone-300 rounded-xl bg-white ">
+            <div className="w-full h-20  border-b border-stone-300 flex items-center justify-start pr-6 gap-x-2 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -187,7 +182,7 @@ export default function Multimedia() {
             {allcorses.map((item) => (
               <div
                 key={item.id}
-                className="w-[315px] h-80 hover:bg-white border p-3 "
+                className="w-[315px] h-80 hover:bg-white border border-stone-300 p-3 "
               >
                 <div className="w-full h-36 bg-gray-200">
                   <img
@@ -234,7 +229,7 @@ export default function Multimedia() {
         </div>
       </div>
 
-      <div className="w-11/12 mx-auto h-14  flex flex-col items-center justify-start  sm:hidden  border-b">
+      <div className="w-11/12 mx-auto h-14  flex flex-col items-center justify-start  sm:hidden  border-b border-stone-300">
         <div className="w-full h-max flex items-center justify-start gap-x-6 ">
           <button
             onClick={showFilterHandler}
@@ -297,7 +292,7 @@ export default function Multimedia() {
           <div className="w-11/12 flex flex-col overflow-auto">
             <label
               id="filter1"
-              className="flex justify-between w-full py-3 border-b"
+              className="flex justify-between w-full py-3 border-b border-stone-300"
             >
               <p>مرتبط ترین</p>
               <input id="filter1" type="checkbox" className="w-6 h-6" />
@@ -305,7 +300,7 @@ export default function Multimedia() {
 
             <label
               id="filter2"
-              className="flex justify-between w-full py-3 border-b"
+              className="flex justify-between w-full py-3 border-b border-stone-300"
             >
               <p>پربازدید ترین</p>
               <input id="filter-2" type="checkbox" className="w-6 h-6" />
@@ -313,7 +308,7 @@ export default function Multimedia() {
 
             <label
               id="filter3"
-              className="flex justify-between w-full py-3 border-b"
+              className="flex justify-between w-full py-3 border-b border-stone-300"
             >
               <p>جدید ترین</p>
               <input id="filter3" type="checkbox" className="w-6 h-6" />
@@ -321,7 +316,7 @@ export default function Multimedia() {
 
             <label
               id="filter4"
-              className="flex justify-between w-full py-3 border-b"
+              className="flex justify-between w-full py-3 border-b border-stone-300"
             >
               <p>پربازدید ترین</p>
               <input id="filter4" type="checkbox" className="w-6 h-6 " />
@@ -329,7 +324,7 @@ export default function Multimedia() {
 
             <label
               id="filter5"
-              className="flex justify-between w-full py-3 border-b"
+              className="flex justify-between w-full py-3 border-b border-stone-300"
             >
               <p>پربازدید ترین</p>
               <input id="filter5" type="checkbox" className="w-6 h-6" />
@@ -337,7 +332,7 @@ export default function Multimedia() {
 
             <label
               id="filter6"
-              className="flex justify-between w-full py-3 border-b"
+              className="flex justify-between w-full py-3 border-b border-stone-300"
             >
               <p>پربازدید ترین</p>
               <input id="filter6" type="checkbox" className="w-6 h-6" />
@@ -345,7 +340,7 @@ export default function Multimedia() {
 
             <label
               id="filter7"
-              className="flex justify-between w-full py-3 border-b"
+              className="flex justify-between w-full py-3 border-b border-stone-300"
             >
               <p>پربازدید ترین</p>
               <input id="filter7" type="checkbox" className="w-6 h-6" />
@@ -353,7 +348,7 @@ export default function Multimedia() {
 
             <label
               id="filter8"
-              className="flex justify-between w-full py-3 border-b"
+              className="flex justify-between w-full py-3 border-b border-stone-300"
             >
               <p>پربازدید ترین</p>
               <input id="filter8" type="checkbox" className="w-6 h-6" />
@@ -361,7 +356,7 @@ export default function Multimedia() {
 
             <label
               id="filter9"
-              className="flex justify-between w-full py-3 border-b"
+              className="flex justify-between w-full py-3 border-b border-stone-300"
             >
               <p>پربازدید ترین</p>
               <input id="filter9" type="checkbox" className="w-6 h-6" />
@@ -369,7 +364,7 @@ export default function Multimedia() {
 
             <label
               id="filter10"
-              className="flex justify-between w-full py-3 border-b"
+              className="flex justify-between w-full py-3 border-b border-stone-300"
             >
               <p>پربازدید ترین</p>
               <input id="filter10" type="checkbox" className="w-6 h-6" />
@@ -377,14 +372,14 @@ export default function Multimedia() {
 
             <label
               id="filter11"
-              className="flex justify-between w-full py-3 border-b"
+              className="flex justify-between w-full py-3 border-b border-stone-300"
             >
               <p>پربازدید ترین</p>
               <input id="filter11" type="checkbox" className="w-6 h-6" />
             </label>
             <label
               id="filter12"
-              className="flex justify-between w-full py-3 border-b"
+              className="flex justify-between w-full py-3 border-b border-stone-300"
             >
               <p>پربازدید ترین</p>
               <input id="filter12" type="checkbox" className="w-6 h-6" />
@@ -416,7 +411,7 @@ export default function Multimedia() {
           </div>
           <div className=" pb-4  w-full h-38 flex flex-col gap-y-4  overflow-auto ">
             <div className="w-11/12 mx-auto h-370px pb-4 border rounded-xl bg-white">
-              <div className="w-full h-20  border-b flex items-center justify-start pr-4 gap-x-2 ">
+              <div className="w-full h-20  border-b border-stone-300 flex items-center justify-start pr-4 gap-x-2 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -454,7 +449,7 @@ export default function Multimedia() {
              
             <div className="w-11/12 bg-white h-max  mx-auto px-4 rounded-xl border py-4">
               <p className="font-bold pb-4 ">جستجو بر اساس کلمه</p>
-              <div className="h-12 rounded-lg border w-full  flex items-center justify-between">
+              <div className="h-12 rounded-lg  border border-stone-300 w-full  flex items-center justify-between">
               <svg xmlns="http://www.w3.org/2000/svg" className="mr-3 opacity-70" viewBox="0 0 24 24" width="24" height="24"><path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z" fill="#000"></path></svg>
               <input className="w-11/12 h-full outline-0 bg-inherit" type="text" />
               </div>
@@ -473,7 +468,7 @@ export default function Multimedia() {
                   </p>
                   <input
                     type="text"
-                    className="border h-full w-9/12 rounded-lg outline-0 pr-2"
+                    className="border border-stone-300 h-full w-9/12 rounded-lg outline-0 pr-2"
                   />
                 </div>
                 <div className="flex w-full items-cenetr justify-center h-12 ">
@@ -482,7 +477,7 @@ export default function Multimedia() {
                   </p>
                   <input
                     type="text"
-                    className="border h-full w-9/12 rounded-lg outline-0 pr-2"
+                    className="border border-stone-300 h-full w-9/12 rounded-lg outline-0 pr-2"
                   />
                 </div>
               </div>
@@ -490,7 +485,7 @@ export default function Multimedia() {
               
             </div>
             <div className="w-11/12 mx-auto  h-max border rounded-xl bg-white ">
-            <div className="w-full h-20  border-b flex items-center justify-start pr-4 gap-x-2 ">
+            <div className="w-full h-20  border-b border-stone-300  flex items-center justify-start pr-4 gap-x-2 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
