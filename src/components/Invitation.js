@@ -8,7 +8,7 @@ export default function Invitation() {
     <div className='xs:py-10 w-full h-max py-20 bg-neutral-100 mx-auto my-6 flex items-center justify-center '>
       <div className='container xs:px-4 px-2  flex items-center justify-center flex-wrap gap-y-3 gap-x-10'>
         
-      <div className='xs:w-full xs:h-28  h-44 w-full pr-6 md:w-149  xs:mx-1 md:h-56 bg-gradient-to-l from-yellow-500 grow-0  to-yellow-400  rounded-2xl flex justify-center items-center'>
+      <div className='xs:w-full xs:h-28  h-44 w-full pr-6 md:w-[38rem]  xs:mx-1 md:h-56 bg-gradient-to-l from-yellow-500 grow-0  to-yellow-400  rounded-2xl flex justify-center items-center'>
          
          <div className=' w-20 h-20 translate-x-6  flex items-center justify-center '>
              {/* <HiOutlineSpeakerphone style={{color:"white"}} className='text-7xl xs:text-6xl xs:pr-3'/> */}
@@ -27,7 +27,7 @@ export default function Invitation() {
          </div>
      </div>
 
-      <div className='xs:w-full xs:h-28 w-full h-44 md:w-149 md:h-56 bg-gradient-to-l pr-6 from-blue-500 grow-0  to-cyan-400  rounded-2xl flex justify-center items-center'>
+      <div className='xs:w-full xs:h-28 w-full h-44 md:w-[38rem] md:h-56 bg-gradient-to-l pr-6 from-blue-500 grow-0  to-cyan-400  rounded-2xl flex justify-center items-center'>
          
             <div className='  w-20 h-20  translate-x-6 flex items-center justify-center'>
                

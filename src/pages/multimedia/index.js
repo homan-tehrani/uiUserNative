@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { albumPhoto } from "../../../src/db.json";
 import Loading from "@/components/loading";
+import AccordionForMultiMedia from "@/components/AccordionForMultiMedia";
+import AccordionMultiMediResponsive from "@/components/AccordionMultiMediResponsive";
 
 export default function Multimedia() {
-  const [isShowAccordion, setIsShowAccordion] = useState(false);
-  const [isShowAccordion2, setIsShowAccordion2] = useState(false);
-  const [isShowAccordion3, setIsShowAccordion3] = useState(false);
+  
   const [allcorses, setAllCorses] = useState(null);
   const [showOrdering, setShowOrdering] = useState(false);
   const [showFiltering, setShowFiltering] = useState(false);
@@ -13,9 +13,7 @@ export default function Multimedia() {
   useEffect(() => {
     setAllCorses(albumPhoto);
   }, []);
-  const accordionHandler = () => {
-    setIsShowAccordion((prev) => !prev);
-  };
+  
   const accordionHandler2 = () => {
     setIsShowAccordion2((prev) => !prev);
   };
@@ -177,146 +175,10 @@ export default function Multimedia() {
               </svg>
               <p className="font-bold">آرشیو بر اساس موضوع</p>
             </div>
-            <button
-              onClick={accordionHandler}
-              className=" w-10/12 mx-auto h-10 flex items-center mt-2 justify-between"
-            >
-              <p>اقتصاد</p>
-              <div>
-                {!isShowAccordion && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="20"
-                    height="20"
-                  >
-                    <path
-                      d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3637 14.364L16.9495 15.7782L11.9997 10.8284Z"
-                      fill="#000"
-                    ></path>
-                  </svg>
-                )}
-                {isShowAccordion && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="20"
-                    height="20"
-                  >
-                    <path
-                      d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"
-                      fill="#000"
-                    ></path>
-                  </svg>
-                )}
-              </div>
-            </button>
-            {isShowAccordion && (
-              <div className="w-10/12 mx-auto my-4 pb-4 flex flex-col gap-y-8 font-bold  border-b">
-                <div className="flex items-center justify-satrt  gap-x-2 ">
-                  <input type="checkbox" className="w-6 h-6 " />
-                  <p>اقتصاد ایران</p>
-                </div>
-                <div className="flex items-center justify-satrt  gap-x-2">
-                  <input type="checkbox" className="w-6 h-6 " />
-                  <p>اقتصاد جهان</p>
-                </div>
-              </div>
-            )}
+        <AccordionForMultiMedia/>
+        <AccordionForMultiMedia/>
+        <AccordionForMultiMedia/>
 
-            <button
-              onClick={accordionHandler2}
-              className=" w-10/12 mx-auto h-10 flex items-center my-2 justify-between"
-            >
-              <p>دشمن شناسی</p>
-              <div>
-                {!isShowAccordion2 && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="20"
-                    height="20"
-                  >
-                    <path
-                      d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3637 14.364L16.9495 15.7782L11.9997 10.8284Z"
-                      fill="#000"
-                    ></path>
-                  </svg>
-                )}
-                {isShowAccordion2 && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="20"
-                    height="20"
-                  >
-                    <path
-                      d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"
-                      fill="#000"
-                    ></path>
-                  </svg>
-                )}
-              </div>
-            </button>
-            {isShowAccordion2 && (
-              <div className="w-10/12 mx-auto pb-4 flex mt-4 flex-col gap-y-8 font-bold  border-b">
-                <div className="flex items-center justify-satrt  gap-x-2 ">
-                  <input type="checkbox" className="w-6 h-6 " />
-                  <p>اقتصاد ایران</p>
-                </div>
-                <div className="flex items-center justify-satrt  gap-x-2">
-                  <input type="checkbox" className="w-6 h-6 " />
-                  <p>اقتصاد جهان</p>
-                </div>
-              </div>
-            )}
-
-            <button
-              onClick={accordionHandler3}
-              className=" w-10/12 mx-auto h-10 flex items-center my-4 justify-between"
-            >
-              <p> امنیت ایران</p>
-              <div>
-                {!isShowAccordion3 && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="20"
-                    height="20"
-                  >
-                    <path
-                      d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3637 14.364L16.9495 15.7782L11.9997 10.8284Z"
-                      fill="#000"
-                    ></path>
-                  </svg>
-                )}
-                {isShowAccordion3 && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="20"
-                    height="20"
-                  >
-                    <path
-                      d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"
-                      fill="#000"
-                    ></path>
-                  </svg>
-                )}
-              </div>
-            </button>
-            {isShowAccordion3 && (
-              <div className="w-10/12 mx-auto pb-4 mt-4 flex flex-col gap-y-8 font-bold  border-b">
-                <div className="flex items-center justify-satrt  gap-x-2 ">
-                  <input type="checkbox" className="w-6 h-6 " />
-                  <p>اقتصاد ایران</p>
-                </div>
-                <div className="flex items-center justify-satrt  gap-x-2">
-                  <input type="checkbox" className="w-6 h-6 " />
-                  <p>اقتصاد جهان</p>
-                </div>
-              </div>
-            )}
           </div>
         </aside>
 
@@ -410,7 +272,7 @@ export default function Multimedia() {
           </button>
         </div>
         <div
-          className={`w-full  flex-col items-center justify-start flex h-100 bg-white rounded-t-xl transition-all  fixed ${
+          className={`w-full  flex-col items-center justify-start flex h-100 bg-stone-100 rounded-t-xl transition-all  fixed ${
             showOrdering ? "bottom-0" : "-bottom-110"
           }  z-50 `}
         >
@@ -531,7 +393,7 @@ export default function Multimedia() {
         </div>
 
         <div
-          className={`w-full  flex-col items-center justify-start flex h-100 bg-white rounded-t-xl transition-all  fixed ${
+          className={`w-full  flex-col items-center justify-start flex h-100 bg-stone-100 rounded-t-xl transition-all  fixed ${
             showFiltering ? "bottom-0" : "-bottom-110"
           }  z-50 `}
         >
@@ -554,7 +416,7 @@ export default function Multimedia() {
           </div>
           <div className=" pb-4  w-full h-38 flex flex-col gap-y-4  overflow-auto ">
             <div className="w-11/12 mx-auto h-370px pb-4 border rounded-xl bg-white">
-              <div className="w-full h-20  border-b flex items-center justify-start pr-6 gap-x-2 ">
+              <div className="w-full h-20  border-b flex items-center justify-start pr-4 gap-x-2 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -569,7 +431,7 @@ export default function Multimedia() {
                 <p>فیلتر</p>
               </div>
 
-              <div className="w-full h-64  translate-y-4 flex flex-col justify-around pr-4 font-bold">
+              <div className="w-full h-64  translate-y-4 flex flex-col  justify-around pr-4 font-bold">
                 <div className="flex  items-center justify-satrt  gap-x-2">
                   <input type="checkbox" className="w-6 h-6 " />
                   <p>همه رسانه ها</p>
@@ -589,8 +451,18 @@ export default function Multimedia() {
               </div>
             </div>
 
+             
+            <div className="w-11/12 bg-white h-max  mx-auto px-4 rounded-xl border py-4">
+              <p className="font-bold pb-4 ">جستجو بر اساس کلمه</p>
+              <div className="h-12 rounded-lg border w-full  flex items-center justify-between">
+              <svg xmlns="http://www.w3.org/2000/svg" className="mr-3 opacity-70" viewBox="0 0 24 24" width="24" height="24"><path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z" fill="#000"></path></svg>
+              <input className="w-11/12 h-full outline-0 bg-inherit" type="text" />
+              </div>
+            </div>
+              
+
             <div className="w-11/12 border h-48 bg-white pb-4 rounded-xl gap-y-2 mx-auto flex flex-col items-center justify-center  ">
-              <p className="text-right mt-6 w-full pr-5 font-bold flex items-center  ">
+              <p className="text-right mt-6 w-full pr-4 font-bold flex items-center mb-4 ">
                 آرشیو بر اساس بازه زمانی
               </p>
 
@@ -618,7 +490,7 @@ export default function Multimedia() {
               
             </div>
             <div className="w-11/12 mx-auto  h-max border rounded-xl bg-white ">
-            <div className="w-full h-20  border-b flex items-center justify-start pr-6 gap-x-2 ">
+            <div className="w-full h-20  border-b flex items-center justify-start pr-4 gap-x-2 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -632,146 +504,10 @@ export default function Multimedia() {
               </svg>
               <p className="font-bold">آرشیو بر اساس موضوع</p>
             </div>
-            <button
-              onClick={accordionHandler}
-              className=" w-10/12 mx-auto h-10 flex items-center mt-2 justify-between"
-            >
-              <p>اقتصاد</p>
-              <div>
-                {!isShowAccordion && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="20"
-                    height="20"
-                  >
-                    <path
-                      d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3637 14.364L16.9495 15.7782L11.9997 10.8284Z"
-                      fill="#000"
-                    ></path>
-                  </svg>
-                )}
-                {isShowAccordion && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="20"
-                    height="20"
-                  >
-                    <path
-                      d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"
-                      fill="#000"
-                    ></path>
-                  </svg>
-                )}
-              </div>
-            </button>
-            {isShowAccordion && (
-              <div className="w-10/12 mx-auto my-4 pb-4 flex flex-col gap-y-8 font-bold  border-b">
-                <div className="flex items-center justify-satrt  gap-x-2 ">
-                  <input type="checkbox" className="w-6 h-6 " />
-                  <p>اقتصاد ایران</p>
-                </div>
-                <div className="flex items-center justify-satrt  gap-x-2">
-                  <input type="checkbox" className="w-6 h-6 " />
-                  <p>اقتصاد جهان</p>
-                </div>
-              </div>
-            )}
-
-            <button
-              onClick={accordionHandler2}
-              className=" w-10/12 mx-auto h-10 flex items-center my-2 justify-between"
-            >
-              <p>دشمن شناسی</p>
-              <div>
-                {!isShowAccordion2 && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="20"
-                    height="20"
-                  >
-                    <path
-                      d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3637 14.364L16.9495 15.7782L11.9997 10.8284Z"
-                      fill="#000"
-                    ></path>
-                  </svg>
-                )}
-                {isShowAccordion2 && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="20"
-                    height="20"
-                  >
-                    <path
-                      d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"
-                      fill="#000"
-                    ></path>
-                  </svg>
-                )}
-              </div>
-            </button>
-            {isShowAccordion2 && (
-              <div className="w-10/12 mx-auto pb-4 flex mt-4 flex-col gap-y-8 font-bold  border-b">
-                <div className="flex items-center justify-satrt  gap-x-2 ">
-                  <input type="checkbox" className="w-6 h-6 " />
-                  <p>اقتصاد ایران</p>
-                </div>
-                <div className="flex items-center justify-satrt  gap-x-2">
-                  <input type="checkbox" className="w-6 h-6 " />
-                  <p>اقتصاد جهان</p>
-                </div>
-              </div>
-            )}
-
-            <button
-              onClick={accordionHandler3}
-              className=" w-10/12 mx-auto h-10 flex items-center my-4 justify-between"
-            >
-              <p> امنیت ایران</p>
-              <div>
-                {!isShowAccordion3 && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="20"
-                    height="20"
-                  >
-                    <path
-                      d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3637 14.364L16.9495 15.7782L11.9997 10.8284Z"
-                      fill="#000"
-                    ></path>
-                  </svg>
-                )}
-                {isShowAccordion3 && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="20"
-                    height="20"
-                  >
-                    <path
-                      d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"
-                      fill="#000"
-                    ></path>
-                  </svg>
-                )}
-              </div>
-            </button>
-            {isShowAccordion3 && (
-              <div className="w-10/12 mx-auto pb-4 mt-4 flex flex-col gap-y-8 font-bold  border-b">
-                <div className="flex items-center justify-satrt  gap-x-2 ">
-                  <input type="checkbox" className="w-6 h-6 " />
-                  <p>اقتصاد ایران</p>
-                </div>
-                <div className="flex items-center justify-satrt  gap-x-2">
-                  <input type="checkbox" className="w-6 h-6 " />
-                  <p>اقتصاد جهان</p>
-                </div>
-              </div>
-            )}
+            
+            <AccordionMultiMediResponsive/>
+            <AccordionMultiMediResponsive/>
+            <AccordionMultiMediResponsive/>
           </div>
           </div>
         </div>

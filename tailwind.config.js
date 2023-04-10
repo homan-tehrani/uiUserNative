@@ -17,7 +17,6 @@ module.exports = {
         '18': 'repeat(18, minmax(0, 1fr))'
       },
       spacing: {
-        '149':'38rem',
         '148': '37rem',
         '120':'36rem',
         '152':'42rem',

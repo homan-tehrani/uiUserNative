@@ -28,7 +28,7 @@ export default function Album2() {
     }
 
   return (
-    <div className=" container px-2 mx-auto ">
+    <div className=" container px-2z mx-auto ">
     <div className=" mb-6 ">
     <MorSpeech classMore="blue-400" underline="true" colorIcon="fill-blue-400" colorText="text-blue-400" content="جدیدترین سخنرانی ها" nextButtonHandler={nextSlideHandler} prevButtonHandler={prevSlideHandler}/>
     </div>
