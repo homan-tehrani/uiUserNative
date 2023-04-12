@@ -1,7 +1,12 @@
 import React from 'react'
+import InternalDescriptionMultiMedia from '@/components/InternalDescriptionMultiMedia'
+import PointOfViewMultiMedia from '@/components/PointOfViewMultiMedia'
 
 export default function allCourses() {
   return (
+  <>
+  
+    <div className='w-full h-max bg-neutral-100 py-8 lg:bg-inherit lg:py-3'>
     <div className='w-full h-max bg-white lg:bg-neutral-100 '>
       <div className='container mx-auto translate-y-6 px-2 '>
       <p className='text-center lg:text-right xs:text-[12px] text-[13px]'><span className='text-cyan-700'>خانه</span>/پنل چندرسانه ای/دشمن شناسی و توضیحات استاد</p>
@@ -9,18 +14,18 @@ export default function allCourses() {
       
     <div className='container w-full h-full mx-auto px-2 py-8  translate-y-4  '>
   
-      <div className='w-full h-max flex flex-col-reverse lg:grid  lg:grid-cols-12 rounded-xl '>
-        <div className='order-1 lg:order-none col-span-8  h-max flex flex-col gap-y-2 justify-center  pt-5  lg:pr-3 rounded-xl lg:bg-white lg:rounded-r-xl pb-3'>
+      <div className='w-full h-max flex flex-col-reverse lg:grid  rounded-xl lg:grid-cols-12   '>
+        <div className='order-1 lg:order-none col-span-8  h-max flex flex-col gap-y-2 justify-center  pt-5  lg:pr-3  lg:bg-white lg:rounded-r-xl pb-3'>
         <p className='text-sm lg:text-base font-bold'>دشمن شناسی و توضیحات استاد</p>
         <div className=' w-full h-full flex items-start'>
           <video src="/assets/1.mp4" className='w-full h-full' controls></video>
         </div>
         </div>
 
-        <div className='col-span-4  h-max w-full pr-0 lg:pr-4  lg:bg-white rounded-l-xl pt-5 pb-3'>
+        <div className='col-span-4 bg-white h-max w-full pr-0 lg:pr-4   rounded-l-xl pb-1 pt-5 '>
           <p className=' mt-6 pb-2 lg:mt-0 lg:pb-2 font-bold'>تمامی جلسات</p>
-          <div className=' flex flex-col h-[450px] lg:h-[360px] xl:h-[460px] overflow-auto gap-y-3'>
-          <div className='w-full   lg:w-8/12 cursor-pointer h-20 border hover:bg-white bg-neutral-100 border-stone-300 rounded-md flex p-2 gap-x-2 '>
+          <div className=' flex flex-col h-[450px] lg:h-[360px] xl:h-[450px] overflow-auto gap-y-3'>
+          <div className='w-full  lg:w-8/12 cursor-pointer h-20 border hover:bg-white bg-neutral-100 border-stone-300 rounded-md flex p-2 gap-x-2 '>
             <div className='w-16 h-full flex items-center  justify-center relative'>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className='w-8  absolute opacity-70' ><path d="M19.376 12.4158L8.77735 19.4816C8.54759 19.6348 8.23715 19.5727 8.08397 19.3429C8.02922 19.2608 8 19.1643 8 19.0656V4.93408C8 4.65794 8.22386 4.43408 8.5 4.43408C8.59871 4.43408 8.69522 4.4633 8.77735 4.51806L19.376 11.5838C19.6057 11.737 19.6678 12.0474 19.5146 12.2772C19.478 12.3321 19.4309 12.3792 19.376 12.4158Z" fill="#000"></path></svg>
             <img src="/assets/images/album-photo/1.jpg" alt="" className='w-full h-full'/>
@@ -90,7 +95,7 @@ export default function allCourses() {
           </div>
 
         </div>
-       <div className='row-start-2 col-span-8  h-20 flex items-center bg-white lg:bg-neutral-100'>
+       <div className='row-start-2 col-span-8  h-20 flex items-center bg-white lg:bg-neutral-100 mt-3'>
        <div className='w-full  flex items-center gap-x-2'>
             <div className='w-20 h-16'>
             <img src="/assets/images/album-photo/1.jpg" alt="" className='w-full h-full'/>
@@ -128,5 +133,10 @@ export default function allCourses() {
       </div>
     </div>
     </div>
+    <InternalDescriptionMultiMedia/>
+    <PointOfViewMultiMedia/>
+    </div>
+    
+    </>
   )
 }

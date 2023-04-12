@@ -3,6 +3,7 @@ import { albumPhoto } from "../../../src/db.json";
 import Loading from "@/components/loading";
 import AccordionForMultiMedia from "@/components/AccordionForMultiMedia";
 import AccordionMultiMediResponsive from "@/components/AccordionMultiMediResponsive";
+import Link from "next/link";
 
 export default function Multimedia() {
   
@@ -178,11 +179,12 @@ export default function Multimedia() {
         </aside>
 
         <div className=" w-9/12 h-full  flex flex-col  items-center  md:translate-x-0 gap-y-4 ">
-          <div className="w-full h-11/12  flex  flex-wrap justify-end items-center md:justify-center ">
+          <Link href="/multimedia/t" className="w-full h-11/12  flex  flex-wrap justify-end items-center md:justify-center ">
             {allcorses.map((item) => (
               <div
                 key={item.id}
-                className="w-[315px] h-80 hover:bg-white border border-stone-300 p-3 "
+                className="w-[315px] h-80 hover:bg-white border border-stone-300 p-3 cursor-pointer"
+                
               >
                 <div className="w-full h-36 bg-gray-200">
                   <img
@@ -224,7 +226,7 @@ export default function Multimedia() {
                 </div>
               </div>
             ))}
-          </div>
+          </Link>
           <button className="w-32 h-8 bg-neutral-200 rounded">بیشتر</button>
         </div>
       </div>
