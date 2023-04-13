@@ -2,26 +2,41 @@ import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+<<<<<<< HEAD
+import { Pagination } from "swiper";
+=======
 import { Pagination , Navigation } from "swiper";
+>>>>>>> mo3ito
 import Loading from "./loading";
 import MorSpeech from "./MorSpeech";
 import {albumPhoto3} from "../../src/db.json"
 
 export default function Album3() {
   const [albumPhotos3, setAlbumPhotos3] = useState(null);
+<<<<<<< HEAD
+=======
 
   const swiperRef = useRef();
+>>>>>>> mo3ito
   useEffect(() => {
     setAlbumPhotos3(albumPhoto3);
   }, []);
 
 
   const nextSlideHandler =()=>{
+<<<<<<< HEAD
+    console.log("next");
+  }
+
+  const prevSlideHandler =()=>{
+    console.log("prev");
+=======
     swiperRef.current?.slideNext()
   }
 
   const prevSlideHandler =()=>{
     swiperRef.current?.slidePrev()
+>>>>>>> mo3ito
   }
 
   if (!albumPhotos3) {
@@ -29,6 +44,11 @@ export default function Album3() {
   }
 
   return (
+<<<<<<< HEAD
+    <div className="bg-gray-800 pt-12 pb-8 mb-16  px-4 ">
+        <div className="-translate-y-5">
+        <MorSpeech classMore="white" colorIcon="fill-white" colorText="text-white" nextButtonHandler={nextSlideHandler} prevButtonHandler={prevSlideHandler} content="پربازدیدترین سخنرانی ها" icons={true}/>
+=======
     <div className="bg-gray-800 pt-16 md:pt-12 pb-8 mb-16  px-2 ">
         <div className="-translate-y-8 container mx-auto ">
           
@@ -47,12 +67,18 @@ export default function Album3() {
          </div>
          </div>
         <MorSpeech classMore="white" colorIcon="fill-white" colorText="text-white" nextButtonHandler={nextSlideHandler} prevButtonHandler={prevSlideHandler} content="پربازدیدترین سخنرانی ها" />
+>>>>>>> mo3ito
         </div>
        
 
       <Swiper
         slidesPerView={4}
         spaceBetween={15}
+<<<<<<< HEAD
+     
+        modules={[Pagination]}
+        className="w-full h-80  "
+=======
         modules={[Pagination , Navigation]}
         onBeforeInit={(swiper)=>{
           swiperRef.current = swiper;
@@ -79,6 +105,7 @@ export default function Album3() {
         }}
       
         className="container h-80  "
+>>>>>>> mo3ito
       >
         {albumPhotos3.map((item) => (
           <SwiperSlide

@@ -10,6 +10,9 @@
 html , body{
     font-family: iransans;
   }
+<<<<<<< HEAD
+
+=======
   /* 
   .swiper-pagination{
     background: red;
@@ -19,14 +22,20 @@ html , body{
   .swiper-wrapper{
     background-color: blue;
   }
+>>>>>>> mo3ito
   .swiper-pagination-bullet-active{
     
     background: #3b82f6 !important;
     width: 3rem !important;
     border-radius: 10px !important;
     transition: all 0.5s !important;
-
+<<<<<<< HEAD
   }
+=======
+  }
+  .swiper{
+    background-color: red;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: sp;
@@ -37,4 +46,4 @@ html , body{
       @apply flex items-start justify-center pt-5 relative bg-yellow-600;
     }
   } */
-
+>>>>>>> mo3ito

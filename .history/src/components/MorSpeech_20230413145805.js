@@ -1,4 +1,14 @@
 import React from 'react'
+<<<<<<< HEAD
+import { useSwiper } from 'swiper/react'
+
+export default function MorSpeech({nextButtonHandler , prevButtonHandler , icons , underline , content , colorIcon , colorText , classMore}) {
+  const swiper = useSwiper();
+  return (
+    <div  className='flex flex-col justify-center  w-full h-max '>
+      <div className='flex justify-between items-center'>
+        <p className={`${colorText} font-bold`}>{content}</p>
+=======
 
 
 export default function MorSpeech({nextButtonHandler , prevButtonHandler , icons , underline , content , colorIcon , colorText , classMore , moreHandler,addHandler}) {
@@ -7,6 +17,7 @@ export default function MorSpeech({nextButtonHandler , prevButtonHandler , icons
     <div  className='flex flex-col justify-center   w-full h-max '>
       <div className='flex justify-between items-center gap-x-0   md:px-0 xs:gap-x-6 '>
         <p className={`${colorText} font-bold xs:text-ssm`}>{content}</p>
+>>>>>>> mo3ito
 
         {icons && <div  className='flex items-center justify-center w-max gap-x-1 h-8 bg-gray-900 ml-96 text-xsm text-white  px-1 rounded-sm'>
          
@@ -20,12 +31,21 @@ export default function MorSpeech({nextButtonHandler , prevButtonHandler , icons
           
           </button>
         </div>}
+<<<<<<< HEAD
+        <div className='flex gap-x-2'>
+            <button className={`text-${classMore} border border-${classMore}  font-bold text-sm rounded-md w-16 h-8`}>بیشتر</button>
+            <button className='border rounded-md px-1' onClick={()=> swiper.slideNext()}>
+            <svg xmlns="http://www.w3.org/2000/svg" className={colorIcon} viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
+            </button>
+            <button className='border rounded-md px-1' onClick={()=> swiper.slidePrev()}>
+=======
         <div className='flex gap-x-2 '>
             <button onClick={()=>moreHandler} className={`text-${classMore} border border-${classMore} xs:w-12 font-bold text-sm rounded-md w-16 h-8`}>بیشتر</button>
             <button className='border rounded-md px-1' onClick={prevButtonHandler}>
             <svg xmlns="http://www.w3.org/2000/svg" className={colorIcon} viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
             </button>
             <button className='border rounded-md px-1 ' onClick={nextButtonHandler}>
+>>>>>>> mo3ito
             <svg xmlns="http://www.w3.org/2000/svg" className={colorIcon} viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"/></svg>
             </button>
         </div>
