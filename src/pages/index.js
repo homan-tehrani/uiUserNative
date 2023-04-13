@@ -10,7 +10,11 @@ import Album2 from "../components/Album2";
 import Description from "../components/Description";
 import Album3 from "../components/Album3";
 import Suggestion from "../components/Suggestion";
+<<<<<<< HEAD
 import Speech from "../components/Speech";
+=======
+
+>>>>>>> mo3ito
 
 export default function Home({ datas }) {
   return (
@@ -25,6 +29,7 @@ export default function Home({ datas }) {
 
             <>
             <Slider />
+<<<<<<< HEAD
             <Album1 />
             <Invitation/>
             <Album2/>
@@ -32,6 +37,15 @@ export default function Home({ datas }) {
             <Album3 />
             <Suggestion />
             <Speech />
+=======
+             <Album1 />
+             <Invitation/>
+             <Album2/>
+           <Description/>
+            <Album3 />
+             <Suggestion />
+            
+>>>>>>> mo3ito
             </>
 
       </main>

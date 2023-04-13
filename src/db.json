@@ -16,7 +16,18 @@
     { "id": "albumImag5", "src":"assets/images/album-photo/5.jpg", "alt": "image-album" },
     { "id": "albumImag6", "src":"assets/images/album-photo/6.jpg", "alt": "image-album" },
     { "id": "albumImag7", "src":"assets/images/album-photo/7.jpg", "alt": "image-album" },
+<<<<<<< HEAD
     { "id": "albumImag8", "src":"assets/images/album-photo/8.jpg", "alt": "image-album" }
+=======
+    { "id": "albumImag8", "src":"assets/images/album-photo/8.jpg", "alt": "image-album" },
+    { "id": "albumImag9", "src":"assets/images/album-photo/1.jpg", "alt": "image-album" },
+    { "id": "albumImag10", "src":"assets/images/album-photo/2.jpg", "alt": "image-album" },
+    { "id": "albumImag11", "src":"assets/images/album-photo/3.jpg", "alt": "image-album" },
+    { "id": "albumImag12", "src":"assets/images/album-photo/4.jpg", "alt": "image-album" },
+    { "id": "albumImag13", "src":"assets/images/album-photo/5.jpg", "alt": "image-album" },
+    { "id": "albumImag14", "src":"assets/images/album-photo/6.jpg", "alt": "image-album" },
+    { "id": "albumImag15", "src":"assets/images/album-photo/7.jpg", "alt": "image-album" }
+>>>>>>> mo3ito
   ],
   "lecturePhoto":[
     { "id": "lecture1", "src":"assets/images/lecture-photo/1.jpg", "alt": "image-album" },

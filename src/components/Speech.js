@@ -14,7 +14,11 @@ export default function Speech({ datas }) {
   return (
     <div className="w-full flex justify-center items-center relative">
       <div className="flex flex-col w-full h-max">
+<<<<<<< HEAD
         <div className="flex flex-col w-full h-44">
+=======
+        <div className="flex flex-col w-full xs:h-32 h-44">
+>>>>>>> mo3ito
           <img
             src={imageSpeech[0].src}
             alt={imageSpeech[0].alt}
@@ -22,7 +26,11 @@ export default function Speech({ datas }) {
           />
         </div>
       </div>
+<<<<<<< HEAD
       <p className="text-center absolute top-10 bg-pink-200 p-2">پیامبر صلی علی علیه و آله فرمودند : اذا رایتم الربیع،فاکثرو ذکر النشور <br /> <span className="text-pink-800 gont-bold">هرگاه بهار را دیدید بسیار یاد رستاخیز و قیامت نمایید</span> </p>
+=======
+      <p className="xs:text-xsm xs:-translate-y-6 text-center absolute top-10 bg-pink-200 p-2">پیامبر صلی علی علیه و آله فرمودند : اذا رایتم الربیع،فاکثرو ذکر النشور <br /> <span className="text-pink-800 gont-bold">هرگاه بهار را دیدید بسیار یاد رستاخیز و قیامت نمایید</span> </p>
+>>>>>>> mo3ito
     </div>
   );
 }
