@@ -13,12 +13,6 @@ import {albumPhoto2} from "../../src/db.json"
 export default function Album2() {
     const [albumPhotos2 , setAlbumPhotos2]=useState(null)
     const swiperRef = useRef();
-    useEffect(()=>{
-        setAlbumPhotos2(albumPhoto2)
-    },[])
-    const nextSlideHandler =()=>{
-        swiperRef.current?.slideNext();
-    }
 
     const prevSlideHandler =()=>{
         swiperRef.current?.slidePrev();
