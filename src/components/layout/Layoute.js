@@ -8,7 +8,7 @@ export default function Layoute({ children , datas }) {
     <>
       <Header  />
       <div>{children}</div>
-      <Speech />  
+      {/* <Speech />   */}
       <Fotter datas={datas} />
     </>
   );

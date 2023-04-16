@@ -82,13 +82,14 @@ export default function Album3() {
         className="container h-80  "
       >
         {albumPhotos3.map((item) => (
+          
           <SwiperSlide
           key={item.id}
             dir="rtl"
-            className=" bg-gray-900  p-4  text-white border border-cyan-500 rounded-lg "
-        
+            className=" bg-gray-900  p-4  text-white border border-cyan-500 rounded-lg cursor-pointer"
+
           >
-            <div className="w-full h-full  flex flex-col justify-between ">
+            <Link href="/units/internal" className="w-full h-full  flex flex-col justify-between ">
 
             
             <div className="flex  items-center w-full  ">
@@ -120,8 +121,9 @@ export default function Album3() {
             <div className=" text-center text-sm">
               <p>pm 5:25 . sep1 2023 </p>
             </div>
-            </div>
+            </Link>
           </SwiperSlide>
+          
         ))}
       </Swiper>
     </div>

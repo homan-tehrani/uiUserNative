@@ -1,6 +1,6 @@
 import React from 'react'
 import InternalDescriptionMultiMedia from '@/components/InternalDescriptionMultiMedia'
-import PointOfViewMultiMedia from '@/components/PointOfViewMultiMedia'
+import PointOfView from '@/components/PointOfView'
 
 export default function allCourses() {
   return (
@@ -97,8 +97,8 @@ export default function allCourses() {
         </div>
        <div className='row-start-2 col-span-8  h-20 flex items-center bg-white lg:bg-neutral-100 mt-3'>
        <div className='w-full  flex items-center gap-x-2'>
-            <div className='w-20 h-16'>
-            <img src="/assets/images/album-photo/1.jpg" alt="" className='w-full h-full'/>
+            <div className='w-20 h-20 rounded-full'>
+            <img src="/assets/images/album-photo/1.jpg" alt="" className='w-full h-full rounded-full'/>
             </div>
             <div className='flex flex-col gap-y-2 '>
               <p>عادل</p>
@@ -134,7 +134,7 @@ export default function allCourses() {
     </div>
     </div>
     <InternalDescriptionMultiMedia/>
-    <PointOfViewMultiMedia/>
+    <PointOfView backGround="bg-neutral-100" paddingTopButtom="py-20"/>
     </div>
     
     </>

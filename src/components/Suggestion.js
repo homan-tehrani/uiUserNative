@@ -1,6 +1,7 @@
 import React,{useState , useEffect} from 'react'
 import Loading from './loading'
 import {lecturePhoto} from "../../src/db.json"
+import Link from 'next/link'
 
 export default function Suggestion() {
     
@@ -19,7 +20,7 @@ export default function Suggestion() {
         <h2 className='text-xl font-bold'>مطالب مناسب شما</h2>
         <div className='w-full h-max  flex justify-center lg:justify-between  items-center flex-wrap gap-y-6'>
            {suggestionPhoto.map(item=>
-             <div key={item.id} className='w-400px  h-full  '>
+             <Link href="/units" key={item.id} className='w-400px  h-full  '>
              <div className='w-full xs:h-56 h-72  sm:h-80'>
              <img src={item.src} alt={item.alt} className='w-full h-full '/>
              </div>
@@ -59,7 +60,7 @@ export default function Suggestion() {
              </div>
              
             
-         </div>
+         </Link>
 
             )} 
            

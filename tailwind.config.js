@@ -13,9 +13,6 @@ module.exports = {
       screens:{
         'xs':{'max':'430px'},
       },
-      gridTemplateColumns:{
-        '18': 'repeat(18, minmax(0, 1fr))'
-      },
       spacing: {
         '148': '37rem',
         '120':'36rem',
