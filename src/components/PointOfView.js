@@ -146,16 +146,9 @@ export default function PointOfView({backGround , paddingTopButtom}) {
                   
                     
                     </div>
-
-
-                    
-
-                    
-
                 </div>
             </div>
 
-            
         </div>
       <button className=" w-full h-12 flex items-center justify-center xs:my-2 my-5">
         <p className="text-cyan-600" >۲۱ دیدگاه دیگر</p>
