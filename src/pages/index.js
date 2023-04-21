@@ -1,5 +1,4 @@
-import fs from "fs/promises";
-import path from "path";
+
 import Head from "next/head";
 import Layoute from "../components/layout/Layoute";
 import Loading from "../components/loading";
@@ -10,9 +9,13 @@ import Album2 from "../components/Album2";
 import Description from "../components/Description";
 import Album3 from "../components/Album3";
 import Suggestion from "../components/Suggestion";
+import { useEffect } from "react";
+
 
 
 export default function Home({ datas }) {
+
+
   return (
     <>
       <Head>
@@ -39,11 +42,25 @@ export default function Home({ datas }) {
   );
 }
 
-export async function getStaticProps(context) {
-  const findedPath = path.join("src","db.json")
-  const dataJson = await fs.readFile(findedPath)
-  const datas = JSON.parse(dataJson)
-  return {
-    props: { datas },
-  };
+
+
+export async function getStaticProps(context){
+
+  const res = await fetch("https://nativecontent.sirafgroup.com/api/v1/tag/contentByTag/")
+  const data = await res.json(res)
+  console.log(data);
+  
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return{
+    props: {
+
+    }
+  }
+
+
 }

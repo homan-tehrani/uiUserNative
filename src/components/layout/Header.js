@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect , useRef} from "react";
 import Loading from "../loading";
 import Navbar from "../NavBar";
 import { imgeProfile } from "../../db.json";
@@ -8,14 +8,28 @@ import MenuResponsive from "../MenuResponsive";
 
 export default function Header() {
   const [imageProfile, setImageProfile] = useState(null);
-  const [showMenu, setShowMenue] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   useEffect(() => {
     setImageProfile(imgeProfile);
   }, []);
 
   const showMenuHandler = () => {
-    setShowMenue((prev) => !prev);
+    setShowMenu((prev) => !prev);
   };
+
+  const menuRef = useRef()
+  useEffect(()=>{
+    const closeDropDown =(event)=>{
+      if(!menuRef.current.contains(event.target)){
+        setShowMenu(false)
+      }
+    }
+    document.addEventListener("click", closeDropDown)
+    return ()=> document.removeEventListener("click" , closeDropDown )
+  },[])
+
+
+  
 
   if (!imageProfile) {
     return <Loading />;
@@ -99,6 +113,7 @@ export default function Header() {
           width="30"
           height="30"
           onClick={showMenuHandler}
+          ref={menuRef}
         >
           <path fill="none" d="M0 0h24v24H0z" />
           <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" />

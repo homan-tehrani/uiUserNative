@@ -9,7 +9,7 @@ export default function index() {
         <div className='w-full  h-max flex flex-col items-center gap-y-3 pt-12'>
         <div className='flex items-center'>
         <svg xmlns="http://www.w3.org/2000/svg" className='w-10 fill-cyan-700' viewBox="0 0 24 24" ><path d="M5 11V13H19V11H5Z"></path></svg>
-            <h1 className='text-xl sm:text-2xl'>قوانین</h1>
+            <h1 className='xs:text-lg text-xl sm:text-2xl'>قوانین</h1>
         </div>
         <p>لطفا پیش از ارسال ایمیل یا تماس تلفنی، ابتدا <span className='text-cyan-600'>قوانین</span> را مشاهده کنید.</p>
         </div>
