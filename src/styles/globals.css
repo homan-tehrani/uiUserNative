@@ -1,16 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @font-face {
-    font-family: iransans;
-    src: url("../../public/assets/fonts/iransans/irsans-l.woff");
+  font-family: iransans;
+  src: url('../../public/assets/fonts/iransans/irsans-l.woff');
 }
 
-html , body{
-    font-family: iransans;
-  }
-  /* 
+html,
+body {
+  font-family: iransans;
+}
+
+summary {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+/* 
   .swiper-pagination{
     background: red;
     position: absolute;
@@ -37,4 +45,3 @@ html , body{
       @apply flex items-start justify-center pt-5 relative bg-yellow-600;
     }
   } */
-
