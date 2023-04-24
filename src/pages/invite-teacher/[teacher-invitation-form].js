@@ -1,9 +1,9 @@
 import React,{useState , useEffect} from "react";
-import InputForTeacherInvitation from "@/components/InputForTeacherInvitation";
-import SelectOptionForTeacherInvite from "@/components/SelectOptionForTeacherInvite";
-import RadioButtonForTeacherInvitation from "@/components/RadioButtonForTeacherInvitation";
-import QuestionRadioButton from "@/components/QuestionRadioButton";
-import Loading from "@/components/loading";
+import InputForTeacherInvitation from ""components/InputForTeacherInvitation";
+import SelectOptionForTeacherInvite from ""components/SelectOptionForTeacherInvite";
+import RadioButtonForTeacherInvitation from ""components/RadioButtonForTeacherInvitation";
+import QuestionRadioButton from ""components/QuestionRadioButton";
+import Loading from ""components/loading";
 import { Calendar } from "react-multi-date-picker"
 import persian from "react-date-object/calendars/persian"
 import persian_fa from "react-date-object/locales/persian_fa"

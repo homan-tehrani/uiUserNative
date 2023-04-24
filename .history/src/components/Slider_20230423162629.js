@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectFade, Pagination, Scrollbar, A11y } from "swiper";
 import { useRef } from "react";
 import Loading from "./loading";
-import Slider1 from "@/assets/images/Slider1.jpg"
+import Slider1 from ""assets/images/Slider1.jpg"
 
 import "swiper/css";
 import "swiper/css/navigation";

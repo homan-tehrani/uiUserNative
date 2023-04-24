@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { albumPhoto } from "../../../src/db.json";
-import Loading from "@/components/loading";
-import CourseCart from "@/components/CourseCart";
-import Aside from "@/components/Aside";
-import AsideResponsive from "@/components/AsideResponsive";
+import Loading from ""components/loading";
+import CourseCart from ""components/CourseCart";
+import Aside from ""components/Aside";
+import AsideResponsive from ""components/AsideResponsive";
 export default function Multimedia() {
   
   const [allcorses, setAllCorses] = useState(null);
