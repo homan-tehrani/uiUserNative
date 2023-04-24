@@ -1,16 +1,22 @@
-import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, EffectFade, Pagination, Scrollbar, A11y } from "swiper";
-import { useRef } from "react";
-import Loading from "./loading";
-import {Slider1} from ""assets/images/Slider1.jpg"
+import React, { useEffect, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import {
+  Navigation,
+  EffectFade,
+  Pagination,
+  Scrollbar,
+  A11y,
+} from 'swiper';
+import { useRef } from 'react';
+import Loading from './loading';
+import { Slider1 } from 'assets/images/Slider1.jpg';
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import { sliderPhoto } from "../../src/db.json";
-import Survey from "./Survey";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import { sliderPhoto } from '../../src/db.json';
+import Survey from './Survey';
 
 export default function Slider() {
   const [imagesSlider, setImagesSlider] = useState(null);
@@ -29,12 +35,15 @@ export default function Slider() {
 
   return (
     <div className="container mx-auto h-max py-7 px-2">
-      
-
-     
       <Swiper
         wrapperClass="w-full"
-        modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
+        modules={[
+          Navigation,
+          Pagination,
+          Scrollbar,
+          A11y,
+          EffectFade,
+        ]}
         spaceBetween={100}
         slidesPerView={1}
         navigation={{
@@ -49,15 +58,18 @@ export default function Slider() {
         }}
         effect="fade"
         pagination={{
-          el: ".swiper-pagination",
+          el: '.swiper-pagination',
           clickable: true,
         }}
         onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
+        onSlideChange={() => console.log('slide change')}
         className="w-full max-h-[32rem] min-h-full bg-red-200"
       >
         {imagesSlider.map((item) => (
-          <SwiperSlide key={item.id} className="w-full max-h-96  h-full">
+          <SwiperSlide
+            key={item.id}
+            className="w-full max-h-96  h-full"
+          >
             <img
               className="w-full h-full object-cover"
               src={Slider1}
@@ -77,9 +89,7 @@ export default function Slider() {
       <div className="tw-pagination">
         <div className="swiper-pagination"></div>
       </div>
-      <Survey/>
-
-       </div>
-    
+      <Survey />
+    </div>
   );
 }
