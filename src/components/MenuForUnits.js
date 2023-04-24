@@ -60,7 +60,8 @@ export default function MenuForUnits() {
                     </p>
                     <div className='w-full flex flex-col justify-between h-[380px] mt-5 '>
                     <div className='w-full h-max '>
-                        <p className='text-[13px] flex font-bold gap-x-2 mb-4'>
+                        <p className='text-[13px] flex font-bold gap-x-2 mb-4 items-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" className='w-10 fill-cyan-700' viewBox="0 0 24 24" ><path d="M5 11V13H19V11H5Z"></path></svg>    
                         واحد امنیت غذایی
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className='w-4' ><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" ></path></svg>
                         </p>
@@ -73,7 +74,8 @@ export default function MenuForUnits() {
 
                     </div>
                     <div className='w-full h-max mt-2'>
-                        <p className='text-[13px] flex font-bold gap-x-2 mb-4'>
+                    <p className='text-[13px] flex font-bold gap-x-2 mb-4 items-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" className='w-10 fill-cyan-700' viewBox="0 0 24 24" ><path d="M5 11V13H19V11H5Z"></path></svg>    
                         واحد امنیت غذایی
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className='w-4' ><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" ></path></svg>
                         </p>
@@ -92,7 +94,8 @@ export default function MenuForUnits() {
                 
                     <div className='w-full flex flex-col justify-between h-[380px] mt-10  '>
                     <div className='w-full  h-max '>
-                        <p className='text-[13px] flex font-bold gap-x-2 mb-4'>
+                    <p className='text-[13px] flex font-bold gap-x-2 mb-4 items-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" className='w-10 fill-cyan-700' viewBox="0 0 24 24" ><path d="M5 11V13H19V11H5Z"></path></svg>    
                         واحد امنیت غذایی
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className='w-4' ><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" ></path></svg>
                         </p>
@@ -105,7 +108,8 @@ export default function MenuForUnits() {
 
                     </div>
                     <div className='w-full h-max mt-2'>
-                        <p className='text-[13px] flex font-bold gap-x-2 mb-4'>
+                    <p className='text-[13px] flex font-bold gap-x-2 mb-4 items-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" className='w-10 fill-cyan-700' viewBox="0 0 24 24" ><path d="M5 11V13H19V11H5Z"></path></svg>    
                         واحد امنیت غذایی
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className='w-4' ><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" ></path></svg>
                         </p>
@@ -131,10 +135,11 @@ export default function MenuForUnits() {
 
     <div className='w-full flex flex-col justify-between h-[380px] mt-10 '>
     <div className='w-full  h-max '>
-        <p className='text-[13px] flex font-bold gap-x-2 mb-4'>
-        واحد امنیت غذایی
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className='w-4' ><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" ></path></svg>
-        </p>
+    <p className='text-[13px] flex font-bold gap-x-2 mb-4 items-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" className='w-10 fill-cyan-700' viewBox="0 0 24 24" ><path d="M5 11V13H19V11H5Z"></path></svg>    
+                        واحد امنیت غذایی
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className='w-4' ><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" ></path></svg>
+                        </p>
         <ul className='text-[12px] flex flex-col justify-center gap-y-5 opacity-70'>
         <li className='cursor-pointer'>یادداشت کارشناسی</li>
         <li className='cursor-pointer'>عکس نوشت</li>
@@ -144,10 +149,11 @@ export default function MenuForUnits() {
 
     </div>
     <div className='w-full  h-max mt-2'>
-        <p className='text-[13px] flex font-bold gap-x-2 mb-4'>
-        واحد امنیت غذایی
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className='w-4' ><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" ></path></svg>
-        </p>
+    <p className='text-[13px] flex font-bold gap-x-2 mb-4 items-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" className='w-10 fill-cyan-700' viewBox="0 0 24 24" ><path d="M5 11V13H19V11H5Z"></path></svg>    
+                        واحد امنیت غذایی
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className='w-4' ><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" ></path></svg>
+                        </p>
         <ul className='text-[12px] flex flex-col justify-center gap-y-4 opacity-70'>
         <li className='cursor-pointer'>یادداشت کارشناسی</li>
         <li className='cursor-pointer'>عکس نوشت</li>
@@ -170,10 +176,11 @@ export default function MenuForUnits() {
 
     <div className='w-full flex flex-col justify-between h-[380px]  mt-10'>
     <div className='w-full  h-max '>
-        <p className='text-[13px] flex font-bold gap-x-2 mb-4'>
-        واحد امنیت غذایی
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className='w-4' ><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" ></path></svg>
-        </p>
+    <p className='text-[13px] flex font-bold gap-x-2 mb-4 items-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" className='w-10 fill-cyan-700' viewBox="0 0 24 24" ><path d="M5 11V13H19V11H5Z"></path></svg>    
+                        واحد امنیت غذایی
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className='w-4' ><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" ></path></svg>
+                        </p>
         <ul className='text-[12px] flex flex-col justify-center gap-y-5 opacity-70'>
         <li className='cursor-pointer'>یادداشت کارشناسی</li>
         <li className='cursor-pointer'>عکس نوشت</li>
@@ -183,10 +190,11 @@ export default function MenuForUnits() {
 
     </div>
     <div className='w-full  h-max mt-2'>
-        <p className='text-[13px] flex font-bold gap-x-2 mb-4'>
-        واحد امنیت غذایی
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className='w-4' ><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" ></path></svg>
-        </p>
+    <p className='text-[13px] flex font-bold gap-x-2 mb-4 items-center'>
+                        <svg xmlns="http://www.w3.org/2000/svg" className='w-10 fill-cyan-700' viewBox="0 0 24 24" ><path d="M5 11V13H19V11H5Z"></path></svg>    
+                        واحد امنیت غذایی
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className='w-4' ><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z" ></path></svg>
+                        </p>
         <ul className='text-[12px] flex flex-col justify-center gap-y-4 opacity-70'>
         <li className='cursor-pointer'>یادداشت کارشناسی</li>
         <li className='cursor-pointer'>عکس نوشت</li>

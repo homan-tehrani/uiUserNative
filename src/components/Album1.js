@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { albumPhoto } from "db.json";
 
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination } from 'swiper';
 
 export default function Album1() {
   const [albumPhotos1, setAlbumPhotos1] = useState([]);

@@ -31,23 +31,19 @@ export default function Album2() {
           rows: 2,
         }}
         spaceBetween={20}
-        modules={[Grid, Pagination , Navigation]}
+        modules={[Grid, Pagination, Navigation]}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
-        
-          breakpoints={{
+        breakpoints={{
           // when window width is >= 640px
-          0:{
+          0: {
             slidesPerView: 1,
-            
           },
           640: {
-            
             slidesPerView: 2,
           },
           1370: {
-            
             slidesPerView: 3,
           },
         }}

@@ -1,10 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @font-face {
-    font-family: iransans;
-    src: url("../../public/assets/fonts/iransans/irsans-l.woff");
+  font-family: iransans;
+  src: url('../../public/assets/fonts/iransans/irsans-l.woff');
 }
 
 html , body{

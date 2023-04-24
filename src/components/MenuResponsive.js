@@ -2,7 +2,9 @@ import React from 'react'
 import AccordionForUnits from './AccordionForUnits'
 import Link from 'next/link'
 
+
 export default function MenuResponsive() {
+
   return (
     <div className='xs:w-64 w-96 z-50 bg-stone-100 py-3 pb-10 h-[580px] overflow-auto absolute right-4 top-[50px] flex flex-col items-start '>
     <div className=' mx-auto w-11/12 flex items-center justify-start  '>
@@ -28,9 +30,12 @@ export default function MenuResponsive() {
       <li className='flex gap-x-2'>
       <svg xmlns="http://www.w3.org/2000/svg" className='ml-1' viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM10.622 8.415l4.879 3.252a.4.4 0 0 1 0 .666l-4.88 3.252a.4.4 0 0 1-.621-.332V8.747a.4.4 0 0 1 .622-.332z"/></svg>
         آرشیو کلیپ ها</li>
-      <li className='flex gap-x-2'>
+      <Link href="/multimedia"  className='flex gap-x-2'>
       <svg xmlns="http://www.w3.org/2000/svg" className='ml-1' viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 3a3 3 0 0 0-3 3v4a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zm0-2a5 5 0 0 1 5 5v4a5 5 0 0 1-10 0V6a5 5 0 0 1 5-5zM3.055 11H5.07a7.002 7.002 0 0 0 13.858 0h2.016A9.004 9.004 0 0 1 13 18.945V23h-2v-4.055A9.004 9.004 0 0 1 3.055 11z"/></svg>
-        پنل چند رسانه ای</li>
+        پنل چند رسانه ای</Link>
+        <Link  href="/contactUs" className='flex gap-x-2'>
+      <svg xmlns="http://www.w3.org/2000/svg" className='ml-1' viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 3a3 3 0 0 0-3 3v4a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zm0-2a5 5 0 0 1 5 5v4a5 5 0 0 1-10 0V6a5 5 0 0 1 5-5zM3.055 11H5.07a7.002 7.002 0 0 0 13.858 0h2.016A9.004 9.004 0 0 1 13 18.945V23h-2v-4.055A9.004 9.004 0 0 1 3.055 11z"/></svg>
+           تماس با ما</Link>
     </ul>
     <div className=' w-11/12 h-max mx-auto flex flex-col '>
       <div className='flex gap-x-2 items-center'>
