@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import InputTextAreaForm from '"components/InputTextAreaForm';
+import InputTextAreaForm from 'components/InputTextAreaForm';
 
 export default function ticket() {
   const initialState = {

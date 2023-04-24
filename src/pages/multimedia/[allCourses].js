@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import InternalDescriptionMultiMedia from '"components/InternalDescriptionMultiMedia';
-import PointOfView from '"components/PointOfView';
+import InternalDescriptionMultiMedia from 'components/InternalDescriptionMultiMedia';
+import PointOfView from 'components/PointOfView';
 import { useRouter } from 'next/router';
 
 export default function allCourses() {

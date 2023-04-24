@@ -1,7 +1,7 @@
 import { useReducer } from 'react';
-import LoginNamePasswordForm from '"components/RegisterForm/LoginNamePasswordForm';
-import LoginMobileEmail from '"components/RegisterForm/LoginMobileEmail';
-import Registeration from '"components/RegisterForm/Registeration';
+import LoginNamePasswordForm from 'components/RegisterForm/LoginNamePasswordForm';
+import LoginMobileEmail from 'components/RegisterForm/LoginMobileEmail';
+import Registeration from 'components/RegisterForm/Registeration';
 
 export default function Register() {
   const showClicked = {

@@ -1,6 +1,6 @@
 import React from 'react';
-import InternalDescriptionMultiMedia from '"components/InternalDescriptionMultiMedia';
-import PointOfViewMultiMedia from '"components/PointOfViewMultiMedia';
+import InternalDescriptionMultiMedia from 'components/InternalDescriptionMultiMedia';
+import PointOfViewMultiMedia from 'components/PointOfViewMultiMedia';
 
 export default function allCourses() {
   return (
