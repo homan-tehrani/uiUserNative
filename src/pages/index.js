@@ -26,7 +26,6 @@ export default function Home({ datas }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-[#F8F8F6]">
-
         <>
           <Slider />
           <Album1 />
@@ -36,7 +35,6 @@ export default function Home({ datas }) {
           <Album3 />
           <Suggestion />
         </>
-
       </main>
     </>
   );

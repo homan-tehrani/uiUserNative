@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import React from 'react'
-import InternalDescriptionMultiMedia from 'components/InternalDescriptionMultiMedia'
-import PointOfViewMultiMedia from 'components/PointOfViewMultiMedia'
-=======
 import React, { useEffect, useState } from 'react';
 import InternalDescriptionMultiMedia from '@/components/InternalDescriptionMultiMedia';
 import PointOfView from '@/components/PointOfView';
 import { useRouter } from 'next/router';
->>>>>>> 3680cc145b192d80cfebbe9dc04e266a875a505b
 
 export default function allCourses() {
   const {
